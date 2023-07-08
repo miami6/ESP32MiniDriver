@@ -19,26 +19,35 @@ Any ESP32-based board should work with the basic required components,
 Required Components:
 
 Component	Purpose
-ESP32 Wroom-32U 	Gather WiFi data & control hardware modules
+ESP32 Wroom-32U 	Gather WiFi data in 2.4 Ghz & BlueTooth 
 SD Reader	Store data that we can analyze with WiGLE / Python
 GPS Module	Grab geolocation data + timestamp
-Optional Components:
+
 
 Component	Purpose
-128x64 OLED	Get a visual display of WiFi data being captured
-LiPo Battery	Power your ESP8266 for portable applications
-Battery Module	Manage power for your ESP8266 w/ a LiPo battery
-100K Ω Resistor	Optional to read in battery level w/ the D1 Mini
-Hardware Setup
+
+128x64 OLED	
+
+GND GPIO GND 
+VCC GPIO 3V3
+SCK GPIO 22
+SDA GPIO 21
+
 SD Reader Module
 
-SD Reader Pin	ESP32 GPIO	D1 Mini Pin
-MISO	GPIO12	D6
-MOSI	GPIO13	D7
-SCK	GPIO14	D5
-CS	GPIO15	D8
+SD Reader Pin	ESP32 GPIO	 
+3V3  GPIO  3v3
+CS GPIO 05
+MOSI GPIO 23 
+CLK GPIO 18
+MISO GPIO 19
+GND GPIO GND 
+
+ 
 GPS Module
 
-GPS Pin	ESP8266 GPIO	D1 Mini Pin
-TX	GPIO2	D4
-RX	GPIO0	D3
+GPS Pin	ESP32
+VCC    GPIO	 3v3
+TX	    GPIO2	16
+RX     GPIO0	17
+GND    GPIO  GND
